@@ -1,0 +1,38 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://scenes/Green Tree.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/Atlantis Archer.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/Celestial House.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/House II.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/House I.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/Tower I.tscn" type="PackedScene" id=6]
+
+[node name="World" type="Node2D"]
+
+[node name="Atlantis Archer" parent="." instance=ExtResource( 2 )]
+position = Vector2( 267, 86 )
+
+[node name="Houses" type="Node2D" parent="."]
+
+[node name="House I" parent="." instance=ExtResource( 5 )]
+position = Vector2( 432, 304 )
+
+[node name="House II" parent="." instance=ExtResource( 4 )]
+position = Vector2( 568, 304 )
+
+[node name="Celestial Houses" type="Node2D" parent="."]
+
+[node name="Celestial House" parent="Celestial Houses" instance=ExtResource( 3 )]
+position = Vector2( -208, -584 )
+
+[node name="Towers" type="Node2D" parent="."]
+
+[node name="Tower I" parent="Towers" instance=ExtResource( 6 )]
+position = Vector2( 576, 512 )
+
+[node name="Trees" type="Node2D" parent="."]
+
+[node name="Green Trees" type="Node2D" parent="Trees"]
+
+[node name="Green Tree" parent="Trees/Green Trees" instance=ExtResource( 1 )]
+position = Vector2( 448, -320 )
