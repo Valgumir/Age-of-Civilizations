@@ -1,38 +1,95 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://scenes/Green Tree.tscn" type="PackedScene" id=1]
-[ext_resource path="res://scenes/Atlantis Archer.tscn" type="PackedScene" id=2]
-[ext_resource path="res://scenes/Celestial House.tscn" type="PackedScene" id=3]
-[ext_resource path="res://scenes/House II.tscn" type="PackedScene" id=4]
-[ext_resource path="res://scenes/House I.tscn" type="PackedScene" id=5]
-[ext_resource path="res://scenes/Tower I.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/House I.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/Light Archer.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/Town_Hall.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/Wall.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/Green Tree.tscn" type="PackedScene" id=5]
 
 [node name="World" type="Node2D"]
 
-[node name="Atlantis Archer" parent="." instance=ExtResource( 2 )]
-position = Vector2( 267, 86 )
+[node name="Archers" type="Node2D" parent="."]
 
-[node name="Houses" type="Node2D" parent="."]
+[node name="Light Archer" parent="Archers" instance=ExtResource( 2 )]
+position = Vector2( 472, 320 )
 
-[node name="House I" parent="." instance=ExtResource( 5 )]
-position = Vector2( 432, 304 )
+[node name="Houses I" type="Node2D" parent="."]
 
-[node name="House II" parent="." instance=ExtResource( 4 )]
-position = Vector2( 568, 304 )
+[node name="House I" parent="Houses I" instance=ExtResource( 1 )]
+position = Vector2( 256, 160 )
 
-[node name="Celestial Houses" type="Node2D" parent="."]
+[node name="House I2" parent="Houses I" instance=ExtResource( 1 )]
+position = Vector2( 384, 160 )
 
-[node name="Celestial House" parent="Celestial Houses" instance=ExtResource( 3 )]
-position = Vector2( -208, -584 )
+[node name="House I3" parent="Houses I" instance=ExtResource( 1 )]
+position = Vector2( 512, 160 )
 
 [node name="Towers" type="Node2D" parent="."]
-
-[node name="Tower I" parent="Towers" instance=ExtResource( 6 )]
-position = Vector2( 576, 512 )
 
 [node name="Trees" type="Node2D" parent="."]
 
 [node name="Green Trees" type="Node2D" parent="Trees"]
 
-[node name="Green Tree" parent="Trees/Green Trees" instance=ExtResource( 1 )]
-position = Vector2( 448, -320 )
+[node name="Green Tree" parent="Trees/Green Trees" instance=ExtResource( 5 )]
+position = Vector2( 48, -56 )
+
+[node name="Green Tree5" parent="Trees/Green Trees" instance=ExtResource( 5 )]
+position = Vector2( 176, -104 )
+
+[node name="Green Tree6" parent="Trees/Green Trees" instance=ExtResource( 5 )]
+position = Vector2( 16, -40 )
+
+[node name="Green Tree7" parent="Trees/Green Trees" instance=ExtResource( 5 )]
+position = Vector2( 32, -96 )
+
+[node name="Green Tree8" parent="Trees/Green Trees" instance=ExtResource( 5 )]
+position = Vector2( 144, -96 )
+
+[node name="Green Tree9" parent="Trees/Green Trees" instance=ExtResource( 5 )]
+position = Vector2( 104, -96 )
+
+[node name="Green Tree10" parent="Trees/Green Trees" instance=ExtResource( 5 )]
+position = Vector2( 64, -96 )
+
+[node name="Green Tree2" parent="Trees/Green Trees" instance=ExtResource( 5 )]
+position = Vector2( 176, -56 )
+
+[node name="Green Tree3" parent="Trees/Green Trees" instance=ExtResource( 5 )]
+position = Vector2( 128, -56 )
+
+[node name="Green Tree4" parent="Trees/Green Trees" instance=ExtResource( 5 )]
+position = Vector2( 88, -56 )
+
+[node name="Towncenters" type="Node2D" parent="."]
+
+[node name="Town_Hall" parent="Towncenters" instance=ExtResource( 3 )]
+position = Vector2( 584, 320 )
+
+[node name="Gold Mines" type="Node2D" parent="."]
+
+[node name="Stone Mines" type="Node2D" parent="."]
+
+[node name="Walls" type="Node2D" parent="."]
+
+[node name="Wall" parent="Walls" instance=ExtResource( 4 )]
+
+[node name="Wall2" parent="Walls" instance=ExtResource( 4 )]
+position = Vector2( 96, 32 )
+
+[node name="Wall3" parent="Walls" instance=ExtResource( 4 )]
+position = Vector2( 288, 32 )
+
+[node name="Wall4" parent="Walls" instance=ExtResource( 4 )]
+position = Vector2( 32, 224 )
+
+[node name="Wall5" parent="Walls" instance=ExtResource( 4 )]
+position = Vector2( 32, 160 )
+
+[node name="Wall6" parent="Walls" instance=ExtResource( 4 )]
+position = Vector2( 32, 96 )
+
+[node name="Wall7" parent="Walls" instance=ExtResource( 4 )]
+position = Vector2( 224, 32 )
+
+[node name="Wall8" parent="Walls" instance=ExtResource( 4 )]
+position = Vector2( 160, 32 )
