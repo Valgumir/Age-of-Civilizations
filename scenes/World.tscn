@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://scenes/House I.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/Light Archer.tscn" type="PackedScene" id=2]
@@ -7,9 +7,13 @@
 [ext_resource path="res://scenes/Green Tree.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scripts/Camera2D.gd" type="Script" id=6]
 [ext_resource path="res://scripts/World.gd" type="Script" id=7]
-[ext_resource path="res://scenes/Stonemine.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenes/Stone Mine I.tscn" type="PackedScene" id=8]
 [ext_resource path="res://scenes/gold Mine I.tscn" type="PackedScene" id=9]
 [ext_resource path="res://scenes/Stone.tscn" type="PackedScene" id=10]
+[ext_resource path="res://scenes/Gold.tscn" type="PackedScene" id=11]
+[ext_resource path="res://scenes/TreeA.tscn" type="PackedScene" id=12]
+[ext_resource path="res://scenes/TreeC.tscn" type="PackedScene" id=13]
+[ext_resource path="res://scenes/TreeB.tscn" type="PackedScene" id=14]
 
 [node name="World" type="Node2D"]
 script = ExtResource( 7 )
@@ -66,6 +70,30 @@ position = Vector2( 128, -56 )
 [node name="Green Tree4" parent="Trees/Green Trees" instance=ExtResource( 5 )]
 position = Vector2( 88, -56 )
 
+[node name="TreeA" type="Node2D" parent="Trees"]
+
+[node name="TreeA" parent="Trees/TreeA" instance=ExtResource( 12 )]
+position = Vector2( -256, 304 )
+
+[node name="TreeA2" parent="Trees/TreeA" instance=ExtResource( 12 )]
+position = Vector2( -152, 304 )
+
+[node name="TreeA3" parent="Trees/TreeA" instance=ExtResource( 12 )]
+position = Vector2( -248, 416 )
+
+[node name="TreeA4" parent="Trees/TreeA" instance=ExtResource( 12 )]
+position = Vector2( -72, 424 )
+
+[node name="TreeB" type="Node2D" parent="Trees"]
+
+[node name="TreeB" parent="Trees/TreeB" instance=ExtResource( 14 )]
+position = Vector2( 528, -168 )
+
+[node name="TreeC" type="Node2D" parent="Trees"]
+
+[node name="TreeC" parent="Trees/TreeC" instance=ExtResource( 13 )]
+position = Vector2( -328, -120 )
+
 [node name="Towncenters" type="Node2D" parent="."]
 
 [node name="Town_Hall" parent="Towncenters" instance=ExtResource( 3 )]
@@ -74,10 +102,12 @@ position = Vector2( 584, 320 )
 [node name="Gold Mines" type="Node2D" parent="."]
 
 [node name="gold Mine I" parent="Gold Mines" instance=ExtResource( 9 )]
+position = Vector2( -248, 168 )
 
 [node name="Walls" type="Node2D" parent="."]
 
 [node name="Wall" parent="Walls" instance=ExtResource( 4 )]
+position = Vector2( 96, 96 )
 
 [node name="Wall2" parent="Walls" instance=ExtResource( 4 )]
 position = Vector2( 96, 32 )
@@ -107,8 +137,14 @@ script = ExtResource( 6 )
 [node name="Stone Mines" type="Node2D" parent="."]
 
 [node name="Stone Mine I" parent="Stone Mines" instance=ExtResource( 8 )]
-position = Vector2( 120, 360 )
+position = Vector2( 128, 320 )
 
 [node name="Stones" type="Node2D" parent="."]
 
 [node name="Stone" parent="Stones" instance=ExtResource( 10 )]
+position = Vector2( 216, 352 )
+
+[node name="gold" type="Node2D" parent="."]
+
+[node name="Gold" parent="gold" instance=ExtResource( 11 )]
+position = Vector2( -232, 80 )
