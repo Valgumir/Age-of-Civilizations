@@ -17,7 +17,7 @@ script = ExtResource( 2 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 scale = Vector2( 0.3, 0.3 )
 frames = SubResource( 1 )
-animation = "New Anim"
+playing = true
 
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="."]
 polygon = PoolVector2Array( 0, -16, 8, -8, 8, -8, 8, 8, 0, 16, -8, 8, -8, -8 )
