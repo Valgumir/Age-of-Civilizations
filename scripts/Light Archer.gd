@@ -1,22 +1,18 @@
-extends KinematicBody2D
+extends KinematicBody2D #bron: https://youtu.be/De09fsnKCQw
 
-const SPEED = 300
+export var move_speed = 250
+export var stop_distance = 20
 
-var movedir = Vector2(0,0)
-
-func _physics_process(delta):
-	controls_loop()
-	movement_loop()
-
-func controls_loop():
-	var LEFT	= Input.is_action_pressed("ui_left")
-	var RIGHT	= Input.is_action_pressed("ui_right")
-	var UP		= Input.is_action_pressed("ui_up")
-	var DOWN	= Input.is_action_pressed("ui_down")
-
-	movedir.x = -int(LEFT) + int(RIGHT)
-	movedir.y = -int(UP) + int(DOWN)
-
-func movement_loop():
-	var motion = movedir.normalized() * SPEED
-	move_and_slide(motion, Vector2(0,0))
+func _process(delta):
+	_look_at_mouse()
+	_move_to_mouse()
+	
+func _look_at_mouse():
+	look_at(get_global_mouse_position())
+	rotation_degrees = rotation_degrees + 90
+	
+func _move_to_mouse():
+	if position.distance_to(get_global_mouse_position()) > stop_distance:
+		var direction = get_global_mouse_position() - position
+		var normalized_direction = direction.normalized()
+		move_and_slide(normalized_direction * move_speed)
