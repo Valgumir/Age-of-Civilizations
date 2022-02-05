@@ -4,19 +4,21 @@ export (PackedScene) var Light_Archer_scene
 var Enemy = preload("res://scenes/enemy.tscn")
 
 func _ready():
-	randomize()
+	pass
 
 func _on_SpawnTimer_timeout():	#script enemy_spawn
-	var enemy = Enemy.instance()
-	add_child(enemy)
-	enemy.position = $Spawn.position
+	#mogelijke hulp -> https://godotengine.org/qa/65106/how-to-spawn-enemies-every-3-seconds-or-so
+	var e = Enemy.instance()
+	var soldier = get_node("res://scenes/Light Archer.tscn")
+	var pos = soldier.position
+	#enemy.position = $Spawn.position
 	
-	# change spawn position
-#    var area = $SpawnArea
-#    var position = area.rect_position + Vector2(randf() * area.rect_size.x, randf() * area.rect_size.y)
-#    $Spawn.position = position
-
-	var nodes = get_tree().get_nodes_in_group("spawn")
-	var node = nodes[randi() % nodes.size()]
-	var position = node.position
-	$Spawn.position = position
+	if randf() < 0.5:
+		# On the left
+		pos.x -= rand_range(50.0, 200.0)
+	else:
+		# On the right
+		pos.x += rand_range(50.0, 200.0)
+	
+	e.position = Vector2(-10,15)
+	add_child(e)

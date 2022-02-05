@@ -1,5 +1,4 @@
-extends StaticBody2D #source: change frame to another one if mined
+extends StaticBody2D #source: https://godotengine.org/qa/88049/how-to-change-sprite-from-code
 
 func _physics_process(delta):
-
-	$AnimatedSprite.frame == 1
+	$Sprite.texture = load("res://resources/Resources/Regenerating_Gold-removebg-preview.png")

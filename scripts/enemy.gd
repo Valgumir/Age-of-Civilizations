@@ -3,7 +3,7 @@ extends KinematicBody2D
 const WALK_SPEED = 100
 const GRAVITY = 600
 #var health = 5
-onready var player = get_node("res://scenes/Light_Archer")
+onready var soldier = get_node("res://scenes/Light_Archer")
 
 func _ready():
 	pass 
@@ -29,8 +29,8 @@ func _ready():
 #        play_death_effect()
 		
 func _physics_process(delta):
-	if player:
-		var direction = (player.position - position).normalized()
+	if soldier:
+		var direction = (soldier.position - position).normalized()
 		if not is_on_floor():
 			direction.y += GRAVITY
 		
