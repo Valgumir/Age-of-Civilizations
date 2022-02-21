@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://scenes/House I.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/Light Archer.tscn" type="PackedScene" id=2]
@@ -15,6 +15,7 @@
 [ext_resource path="res://scenes/TreeC.tscn" type="PackedScene" id=13]
 [ext_resource path="res://scenes/TreeB.tscn" type="PackedScene" id=14]
 [ext_resource path="res://scenes/Spawn.tscn" type="PackedScene" id=15]
+[ext_resource path="res://scenes/Well.tscn" type="PackedScene" id=16]
 
 [node name="World" type="Node2D"]
 script = ExtResource( 7 )
@@ -180,5 +181,10 @@ margin_bottom = -92.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Wells" type="Node2D" parent="."]
+
+[node name="Well" parent="Wells" instance=ExtResource( 16 )]
+position = Vector2( 384, -88 )
 
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_SpawnTimer_timeout"]
