@@ -1,6 +1,6 @@
-extends Node2D
+extends Node	#tut -> https://youtu.be/xTMM8HLFy-A	6min.
 
-func _ready(): #tut -> https://youtu.be/xTMM8HLFy-A	6min.
+func _ready():
 	var rand = RandomNumberGenerator.new()
 	var enemyscene = load("res://scenes/enemy.tscn")
 	var screen_size = get_viewport().get_visible_rect().size
