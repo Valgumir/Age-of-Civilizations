@@ -6,7 +6,7 @@ func _ready(): #tut -> https://youtu.be/xTMM8HLFy-A	6min.
 	var screen_size = get_viewport().get_visible_rect().size
 
 	for i in range(0, 10):
-		var enemy = enemyscene.instance()
+		var enemy = enemyscene.instantiate()
 		rand.randomize()
 		var x = rand.randf_range(0, screen_size.x)
 		rand.randomize()

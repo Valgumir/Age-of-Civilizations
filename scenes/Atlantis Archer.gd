@@ -1,4 +1,4 @@
-extends KinematicBody2D
+extends CharacterBody2D
 
 const SPEED = 300
 
@@ -19,4 +19,6 @@ func controls_loop():
 
 func movement_loop():
 	var motion = movedir.normalized() * SPEED
-	move_and_slide(motion, Vector2(0,0))
+	set_velocity(motion)
+	set_up_direction(Vector2(0,0))
+	move_and_slide()

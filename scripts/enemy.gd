@@ -1,9 +1,9 @@
-extends KinematicBody2D
+extends CharacterBody2D
 
 const WALK_SPEED = 100
 const GRAVITY = 600
 #var health = 5
-onready var soldier = get_node("res://scenes/Light_Archer")
+@onready var soldier = get_node("res://scenes/Light_Archer")
 
 func _ready():
 	pass 
@@ -34,9 +34,10 @@ func _physics_process(delta):
 		if not is_on_floor():
 			direction.y += GRAVITY
 		
-		move_and_slide(direction * WALK_SPEED)
+		set_velocity(direction * WALK_SPEED)
+		move_and_slide()
 		
-		for i in get_slide_count():
+		for i in get_slide_collision_count():
 			var collision = get_slide_collision(i)
 			# if collision.collider.name == "Player":
 			var object = collision.collider

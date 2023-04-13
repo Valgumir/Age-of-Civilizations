@@ -1,11 +1,11 @@
 extends Camera2D
 
-export var speed = 10.0
-export var zoomspeed = 10.0
-export var zoommargin = 0.1 
+@export var speed = 10.0
+@export var zoomspeed = 10.0
+@export var zoommargin = 0.1 
 
-export var zoomMin = 0.25
-export var zoomMax = 3.0
+@export var zoomMin = 0.25
+@export var zoomMax = 3.0
 
 var zoompos = Vector2()
 var zoomfactor = 1.0
@@ -37,9 +37,9 @@ func _input(event):
 
 	if event is InputEventMouseButton:
 		if event.is_pressed():
-			if event.button_index == BUTTON_WHEEL_UP:
+			if event.button_index == MOUSE_BUTTON_WHEEL_UP:
 				zoomfactor -= 0.01
 				zoompos = get_global_mouse_position()
-			if event.button_index == BUTTON_WHEEL_DOWN:
+			if event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
 				zoomfactor += 0.01
 				zoompos = get_global_mouse_position()

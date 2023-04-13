@@ -15,31 +15,31 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -216.0
-margin_top = -60.0
-margin_right = 345.0
-margin_bottom = 40.0
+offset_left = -216.0
+offset_top = -60.0
+offset_right = 345.0
+offset_bottom = 40.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="StartButton" type="Button" parent="VBoxContainer"]
-margin_right = 561.0
-margin_bottom = 20.0
-focus_neighbour_top = NodePath("../QuitButton")
+offset_right = 561.0
+offset_bottom = 20.0
+focus_neighbor_top = NodePath("../QuitButton")
 text = "Start"
 
 [node name="OptionsButton" type="Button" parent="VBoxContainer"]
-margin_top = 24.0
-margin_right = 561.0
-margin_bottom = 44.0
+offset_top = 24.0
+offset_right = 561.0
+offset_bottom = 44.0
 text = "Options"
 
 [node name="QuitButton" type="Button" parent="VBoxContainer"]
-margin_top = 48.0
-margin_right = 561.0
-margin_bottom = 68.0
-focus_neighbour_bottom = NodePath("../StartButton")
+offset_top = 48.0
+offset_right = 561.0
+offset_bottom = 68.0
+focus_neighbor_bottom = NodePath("../StartButton")
 text = "Quit"
 
 [connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_StartButton_pressed"]

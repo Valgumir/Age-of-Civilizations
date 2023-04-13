@@ -1,23 +1,19 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=10 format=3 uid="uid://bg8je3l8epoyq"]
 
-[ext_resource path="res://scenes/Light Archer.tscn" type="PackedScene" id=2]
-[ext_resource path="res://scenes/Town_Hall.tscn" type="PackedScene" id=3]
-[ext_resource path="res://scenes/Wall.tscn" type="PackedScene" id=4]
-[ext_resource path="res://scenes/Green Tree.tscn" type="PackedScene" id=5]
-[ext_resource path="res://scripts/Camera2D.gd" type="Script" id=6]
-[ext_resource path="res://scripts/World.gd" type="Script" id=7]
-[ext_resource path="res://scenes/TreeA.tscn" type="PackedScene" id=12]
-[ext_resource path="res://scenes/TreeC.tscn" type="PackedScene" id=13]
-[ext_resource path="res://scenes/TreeB.tscn" type="PackedScene" id=14]
-[ext_resource path="res://scenes/Well.tscn" type="PackedScene" id=16]
+[ext_resource type="PackedScene" path="res://scenes/Town_Hall.tscn" id="3"]
+[ext_resource type="PackedScene" path="res://scenes/Wall.tscn" id="4"]
+[ext_resource type="PackedScene" path="res://scenes/Green Tree.tscn" id="5"]
+[ext_resource type="Script" path="res://scripts/Camera2D.gd" id="6"]
+[ext_resource type="Script" path="res://scripts/World.gd" id="7"]
+[ext_resource type="PackedScene" path="res://scenes/TreeA.tscn" id="12"]
+[ext_resource type="PackedScene" path="res://scenes/TreeC.tscn" id="13"]
+[ext_resource type="PackedScene" path="res://scenes/TreeB.tscn" id="14"]
+[ext_resource type="PackedScene" path="res://scenes/Well.tscn" id="16"]
 
 [node name="World" type="Node2D"]
-script = ExtResource( 7 )
+script = ExtResource("7")
 
 [node name="Archers" type="Node2D" parent="."]
-
-[node name="Light Archer" parent="Archers" instance=ExtResource( 2 )]
-position = Vector2( 472, 320 )
 
 [node name="Towers" type="Node2D" parent="."]
 
@@ -25,112 +21,109 @@ position = Vector2( 472, 320 )
 
 [node name="Green Trees" type="Node2D" parent="Trees"]
 
-[node name="Green Tree" parent="Trees/Green Trees" instance=ExtResource( 5 )]
-position = Vector2( 48, -56 )
+[node name="Green Tree" parent="Trees/Green Trees" instance=ExtResource("5")]
+position = Vector2(48, -56)
 
-[node name="Green Tree5" parent="Trees/Green Trees" instance=ExtResource( 5 )]
-position = Vector2( 176, -104 )
+[node name="Green Tree5" parent="Trees/Green Trees" instance=ExtResource("5")]
+position = Vector2(176, -104)
 
-[node name="Green Tree6" parent="Trees/Green Trees" instance=ExtResource( 5 )]
-position = Vector2( 16, -40 )
+[node name="Green Tree6" parent="Trees/Green Trees" instance=ExtResource("5")]
+position = Vector2(16, -40)
 
-[node name="Green Tree7" parent="Trees/Green Trees" instance=ExtResource( 5 )]
-position = Vector2( 32, -96 )
+[node name="Green Tree7" parent="Trees/Green Trees" instance=ExtResource("5")]
+position = Vector2(32, -96)
 
-[node name="Green Tree8" parent="Trees/Green Trees" instance=ExtResource( 5 )]
-position = Vector2( 144, -96 )
+[node name="Green Tree8" parent="Trees/Green Trees" instance=ExtResource("5")]
+position = Vector2(144, -96)
 
-[node name="Green Tree9" parent="Trees/Green Trees" instance=ExtResource( 5 )]
-position = Vector2( 104, -96 )
+[node name="Green Tree9" parent="Trees/Green Trees" instance=ExtResource("5")]
+position = Vector2(104, -96)
 
-[node name="Green Tree10" parent="Trees/Green Trees" instance=ExtResource( 5 )]
-position = Vector2( 64, -96 )
+[node name="Green Tree10" parent="Trees/Green Trees" instance=ExtResource("5")]
+position = Vector2(64, -96)
 
-[node name="Green Tree2" parent="Trees/Green Trees" instance=ExtResource( 5 )]
-position = Vector2( 176, -56 )
+[node name="Green Tree2" parent="Trees/Green Trees" instance=ExtResource("5")]
+position = Vector2(176, -56)
 
-[node name="Green Tree3" parent="Trees/Green Trees" instance=ExtResource( 5 )]
-position = Vector2( 128, -56 )
+[node name="Green Tree3" parent="Trees/Green Trees" instance=ExtResource("5")]
+position = Vector2(128, -56)
 
-[node name="Green Tree4" parent="Trees/Green Trees" instance=ExtResource( 5 )]
-position = Vector2( 88, -56 )
+[node name="Green Tree4" parent="Trees/Green Trees" instance=ExtResource("5")]
+position = Vector2(88, -56)
 
 [node name="TreeA" type="Node2D" parent="Trees"]
 
-[node name="TreeA" parent="Trees/TreeA" instance=ExtResource( 12 )]
-position = Vector2( -256, 304 )
+[node name="TreeA" parent="Trees/TreeA" instance=ExtResource("12")]
+position = Vector2(-256, 304)
 
-[node name="TreeA2" parent="Trees/TreeA" instance=ExtResource( 12 )]
-position = Vector2( -152, 304 )
+[node name="TreeA2" parent="Trees/TreeA" instance=ExtResource("12")]
+position = Vector2(-152, 304)
 
-[node name="TreeA3" parent="Trees/TreeA" instance=ExtResource( 12 )]
-position = Vector2( -248, 416 )
+[node name="TreeA3" parent="Trees/TreeA" instance=ExtResource("12")]
+position = Vector2(-248, 416)
 
-[node name="TreeA4" parent="Trees/TreeA" instance=ExtResource( 12 )]
-position = Vector2( -72, 424 )
+[node name="TreeA4" parent="Trees/TreeA" instance=ExtResource("12")]
+position = Vector2(-72, 424)
 
 [node name="TreeB" type="Node2D" parent="Trees"]
 
-[node name="TreeB" parent="Trees/TreeB" instance=ExtResource( 14 )]
-position = Vector2( 528, -168 )
+[node name="TreeB" parent="Trees/TreeB" instance=ExtResource("14")]
+position = Vector2(528, -168)
 
 [node name="TreeC" type="Node2D" parent="Trees"]
 
-[node name="TreeC" parent="Trees/TreeC" instance=ExtResource( 13 )]
-position = Vector2( -304, -88 )
+[node name="TreeC" parent="Trees/TreeC" instance=ExtResource("13")]
+position = Vector2(-304, -88)
 
-[node name="TreeC2" parent="Trees/TreeC" instance=ExtResource( 13 )]
-position = Vector2( -280, -96 )
+[node name="TreeC2" parent="Trees/TreeC" instance=ExtResource("13")]
+position = Vector2(-280, -96)
 
-[node name="TreeC3" parent="Trees/TreeC" instance=ExtResource( 13 )]
-position = Vector2( -272, -64 )
+[node name="TreeC3" parent="Trees/TreeC" instance=ExtResource("13")]
+position = Vector2(-272, -64)
 
 [node name="Towncenters" type="Node2D" parent="."]
 
-[node name="Town_Hall" parent="Towncenters" instance=ExtResource( 3 )]
-position = Vector2( 584, 320 )
+[node name="Town_Hall" parent="Towncenters" instance=ExtResource("3")]
+position = Vector2(584, 320)
 
 [node name="Walls" type="Node2D" parent="."]
 
-[node name="Wall" parent="Walls" instance=ExtResource( 4 )]
-position = Vector2( 96, 96 )
+[node name="Wall" parent="Walls" instance=ExtResource("4")]
+position = Vector2(96, 96)
 
-[node name="Wall2" parent="Walls" instance=ExtResource( 4 )]
-position = Vector2( 96, 32 )
+[node name="Wall2" parent="Walls" instance=ExtResource("4")]
+position = Vector2(96, 32)
 
-[node name="Wall3" parent="Walls" instance=ExtResource( 4 )]
-position = Vector2( 288, 32 )
+[node name="Wall3" parent="Walls" instance=ExtResource("4")]
+position = Vector2(288, 32)
 
-[node name="Wall4" parent="Walls" instance=ExtResource( 4 )]
-position = Vector2( 32, 224 )
+[node name="Wall4" parent="Walls" instance=ExtResource("4")]
+position = Vector2(32, 224)
 
-[node name="Wall5" parent="Walls" instance=ExtResource( 4 )]
-position = Vector2( 32, 160 )
+[node name="Wall5" parent="Walls" instance=ExtResource("4")]
+position = Vector2(32, 160)
 
-[node name="Wall6" parent="Walls" instance=ExtResource( 4 )]
-position = Vector2( 32, 96 )
+[node name="Wall6" parent="Walls" instance=ExtResource("4")]
+position = Vector2(32, 96)
 
-[node name="Wall7" parent="Walls" instance=ExtResource( 4 )]
-position = Vector2( 224, 32 )
+[node name="Wall7" parent="Walls" instance=ExtResource("4")]
+position = Vector2(224, 32)
 
-[node name="Wall8" parent="Walls" instance=ExtResource( 4 )]
-position = Vector2( 160, 32 )
+[node name="Wall8" parent="Walls" instance=ExtResource("4")]
+position = Vector2(160, 32)
 
 [node name="Wells" type="Node2D" parent="."]
 
-[node name="Well" parent="Wells" instance=ExtResource( 16 )]
-position = Vector2( 384, -88 )
+[node name="Well" parent="Wells" instance=ExtResource("16")]
+position = Vector2(384, -88)
 
 [node name="Camera2D" type="Camera2D" parent="."]
-script = ExtResource( 6 )
+script = ExtResource("6")
 
 [node name="TextEdit" type="TextEdit" parent="."]
-margin_left = -512.0
-margin_top = -320.0
-margin_right = -168.0
-margin_bottom = -176.0
+offset_left = -512.0
+offset_top = -320.0
+offset_right = -168.0
+offset_bottom = -176.0
 text = "errors...
 see debugger"
-__meta__ = {
-"_edit_use_anchors_": false
-}

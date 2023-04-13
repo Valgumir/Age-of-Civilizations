@@ -1,14 +1,14 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://resources/House II.png" type="Texture" id=1]
+[ext_resource path="res://resources/House II.png" type="Texture2D" id=1]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 64, 44 )
+size = Vector2( 64, 44 )
 
 [node name="House II" type="StaticBody2D"]
 position = Vector2( 128, 128 )
 
-[node name="Sprite" type="Sprite" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2( 4.76837e-07, -4.76837e-07 )
 scale = Vector2( 1.28, 1.28 )
 texture = ExtResource( 1 )

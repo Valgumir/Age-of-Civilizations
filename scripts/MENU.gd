@@ -4,7 +4,7 @@ func _ready():
 	$VBoxContainer/StartButton.grab_focus()
 
 func _on_StartButton_pressed():
-	get_tree().change_scene("res://scenes/World.tscn")
+	get_tree().change_scene_to_file("res://scenes/World.tscn")
 
 func _on_OptionsButton_pressed():
 	var options = load("res://scenes/Options.tscn")

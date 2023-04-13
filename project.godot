@@ -6,18 +6,23 @@
 ;   [section] ; section goes between []
 ;   param=value ; assign values to parameters
 
-config_version=4
+config_version=5
 
 [application]
 
 config/name="Age Of Civilizations"
 run/main_scene="res://scenes/World.tscn"
+config/features=PackedStringArray("4.0")
 config/icon="res://icon.png"
 
 [display]
 
-window/size/width=1920
-window/size/height=1080
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+
+[dotnet]
+
+project/assembly_name="Age Of Civilizations"
 
 [physics]
 
@@ -25,6 +30,6 @@ common/enable_pause_aware_picking=true
 
 [rendering]
 
+environment/defaults/default_clear_color=Color(0.0666667, 0.317647, 0.0627451, 1)
+environment/defaults/default_environment="res://default_env.tres"
 threads/thread_model=2
-environment/default_clear_color=Color( 0.0666667, 0.317647, 0.0627451, 1 )
-environment/default_environment="res://default_env.tres"
